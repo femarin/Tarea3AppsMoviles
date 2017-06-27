@@ -45,12 +45,13 @@ public class juego extends AppCompatActivity{
     int c = 0;
     Vector<Integer> contadorjugadas = new Vector<Integer>();
     Vector<carta> destapadas = new Vector<carta>();
+    String colordorso;
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         Bundle bundle = getIntent().getExtras(); // leer informacion de otras actividades
-        final String colordorso=bundle.getString("fondo");
+        colordorso=bundle.getString("fondo");
         musica.playAudio(this, R.raw.musica);
         String archivostr;
         final Intent intent1 = new Intent(juego.this, instrucciones.class); // creaciones de intents
@@ -87,6 +88,7 @@ public class juego extends AppCompatActivity{
         final carta[][] tab = new carta[7][7];
         if((archivostr = bundle.getString("archivo"))!=null){ //carga archivos si hay partida pendiente
             cargajuego(mazo,tablero,descarte,cl);//se carga el juego
+            colordorso=tablero.get(0).getFondo();
             cargatiempo(timestopped);
             cargajugadas(contadorjugadas);
             mChronometer.setBase(SystemClock.elapsedRealtime()+timestopped.get(0));// se ajusta el tiempo al valor guardado y se activa
@@ -125,7 +127,12 @@ public class juego extends AppCompatActivity{
                     c.setPinta(pintas[i]);
                     c.setNumero((j + 1));
                     c.setImgOriginal(cl, this);
-                    c.setFondo(colordorso);
+                    if(colordorso!=null){
+                        c.setFondo(colordorso);
+                    }
+                    else{
+
+                    }
                     cartas.add(c);
                 }
             }
