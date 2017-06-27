@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/constr"
+    android:background="@drawable/fondo">
+
+    <android.support.constraint.Guideline
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:id="@+id/linea1"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.04"
+        />
+    <android.support.constraint.Guideline
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:id="@+id/linea2"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.23"
+        />
+
+
+    <android.support.constraint.Guideline
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:id="@+id/linea3"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.77"
+        />
+    <android.support.constraint.Guideline
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:id="@+id/linea4"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.96"
+        />
+    <android.support.constraint.Guideline
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:id="@+id/linea0"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.2"
+        />
+
+    <android.support.constraint.Guideline
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:id="@+id/linea5"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.39"
+        />
+
+    <android.support.constraint.Guideline
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:id="@+id/linea6"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.61"
+        />
+    <android.support.constraint.Guideline
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:id="@+id/lineah3"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="16dp" />
+    <android.support.constraint.Guideline
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:id="@+id/lineah4"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.09"
+        />
+    <android.support.constraint.Guideline
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:id="@+id/lineah0"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.15"
+        />
+
+    <android.support.constraint.Guideline
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:id="@+id/lineah1"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.8" />
+    <android.support.constraint.Guideline
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:id="@+id/lineah2"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.92"
+        />
+    <android.support.constraint.Guideline
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:id="@+id/lineah5"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.99"
+        />
+
+    <Button
+        android:id="@+id/ins"
+        android:layout_height="0dp"
+        android:layout_width="0dp"
+        android:background="@drawable/instruc"
+        app:layout_constraintRight_toLeftOf="@+id/linea2"
+        app:layout_constraintBottom_toTopOf="@+id/lineah4"
+        app:layout_constraintLeft_toRightOf="@+id/linea1"
+        app:layout_constraintTop_toBottomOf="@+id/lineah3" />
+
+    <Button
+        android:id="@+id/reiniciar"
+        android:layout_height="0dp"
+        android:layout_width="0dp"
+        android:background="@drawable/reinicio"
+        app:layout_constraintRight_toLeftOf="@+id/linea4"
+        app:layout_constraintBottom_toTopOf="@+id/lineah4"
+        app:layout_constraintLeft_toRightOf="@+id/linea3"
+        app:layout_constraintTop_toBottomOf="@+id/lineah3"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <Button
+        android:id="@+id/deshacer"
+        android:layout_height="0dp"
+        android:layout_width="0dp"
+        android:background="@drawable/des"
+        app:layout_constraintRight_toLeftOf="@+id/linea2"
+        app:layout_constraintBottom_toTopOf="@+id/lineah0"
+        app:layout_constraintLeft_toRightOf="@+id/linea1"
+        app:layout_constraintTop_toBottomOf="@+id/lineah4"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <Chronometer
+        android:id="@+id/chronometer4"
+        app:layout_constraintBottom_toTopOf="@+id/lineah1"
+        app:layout_constraintRight_toLeftOf="@+id/linea4"
+        app:layout_constraintTop_toBottomOf="@+id/lineah2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="30dp"
+        android:textColor="@color/colorblanco"
+        app:layout_constraintLeft_toLeftOf="@+id/linea3"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/textView"
+        app:layout_constraintRight_toLeftOf="@+id/linea0"
+        app:layout_constraintBottom_toTopOf="@+id/lineah5"
+        app:layout_constraintLeft_toRightOf="@+id/linea5"
+        app:layout_constraintTop_toBottomOf="@+id/lineah2"
+        android:textSize="30dp"
+        android:textColor="@color/colorblanco"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        app:layout_constraintVertical_bias="0.0" />
+
+</android.support.constraint.ConstraintLayout>
